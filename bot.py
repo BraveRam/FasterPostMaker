@@ -17,7 +17,7 @@ keyboard.add("📝CREATE POST", "📃HOW TO USE")
 keyboard.add("📢PROJECT CHANNEL")
 
 
-@bot.chat_join_request_handler(func=lambda update: True)
+@bot.chat_join_request_handler(func=lambda message: True)
 def join_request(message):
     time.sleep(10)
     bot.approve_chat_join_request(message.chat.id, message.from_user.id)
