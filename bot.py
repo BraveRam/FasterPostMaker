@@ -2,6 +2,7 @@ import telebot
 from telebot.types import *
 from telebot import custom_filters
 from pymongo import MongoClient 
+import time
 
 client = MongoClient("mongodb+srv://really651:K4vSnRMEsZhqsTqS@cluster0.pxc2foz.mongodb.net/?retryWrites=true&w=majority")
 
@@ -10,6 +11,17 @@ collection = db["promo"]
 
 
 bot = telebot.TeleBot("6062326465:AAHezYHb8bs_X4q3UCXgb0ZMTxAdRlxseRc", parse_mode="html")
+
+keyboard = ReplyKeyboardMarkup(resize_keyboard = True)
+keyboard.add("📝CREATE POST", "📃HOW TO USE")
+keyboard.add("📢PROJECT CHANNEL")
+
+
+@bot.chat_join_request_handler(func=lambda update: True)
+def join_request(message):
+    time.sleep(10)
+    bot.approve_chat_join_request(message.chat.id, message.from_user.id)
+    bot.send_message(message.from_user.id, "👋Hello! This Bot Helps you To Create Promotions An A Simple Steps!\nSelect An Option Below:", reply_markup = keyboard)
 
 def check_sub(message):	
 	a =  bot.get_chat_member("@mt_projectz", message.from_user.id)
