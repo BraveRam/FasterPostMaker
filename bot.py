@@ -3,10 +3,10 @@ from telebot.types import *
 from telebot import custom_filters
 from pymongo import MongoClient 
 
-import dns.resolver
+"""import dns.resolver
 dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
 dns.resolver.default_resolver.nameservers=['8.8.8.8']
-
+"""
 client = MongoClient("mongodb+srv://really651:K4vSnRMEsZhqsTqS@cluster0.pxc2foz.mongodb.net/?retryWrites=true&w=majority")
 
 db = client["FastPostMakerBot"]
