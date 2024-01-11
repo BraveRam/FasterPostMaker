@@ -1,2 +1,6 @@
-pytelegrambotapi 
+opsai
+pytelegrambotapi
+PyPDF2
+gTTS
+mtranslate 
 pymongo
