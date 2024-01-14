@@ -8,7 +8,6 @@ client = MongoClient("mongodb+srv://really651:gSPMW6u9WuStXIwD@cluster0.pxc2foz.
 db = client["FastPostMakerBot"]
 collection = db["promo"]
 
-
 bot = telebot.TeleBot("6062326465:AAHezYHb8bs_X4q3UCXgb0ZMTxAdRlxseRc", parse_mode="html")
 
 owner = [1365625365]
@@ -699,13 +698,13 @@ def handle_message(message):
     		bot.set_state(message.from_user.id, llink, message.chat.id)
     		return bot.send_message(message.chat.id, "Well, Send me the link of your promotion\nNB: for @share251bot users only!\nDon\'t have a link for @Share251bot? then click ❌Cancel and Send me /link251 😎:", reply_markup = cancel)
     	else:
-    		return bot.send_message(message.chat.id, "🎁This feature is only available for premium users🎁\n💼UPGRADE NOW: @Lencho24")
+    		return bot.send_message(message.chat.id, "🎁This feature is only available for premium users🎁\n💼UPGRADE NOW: @betterparrot")
     if message.text =="📸PHOTO":
     	if premium is True:
     		bot.set_state(message.from_user.id, lplink, message.chat.id)
     		return bot.send_message(message.chat.id, "Well, Send me the link of your promotion\nNB: for @share251bot users only!\nDon\'t have a link for @Share251bot? then click ❌Cancel and Send me /link251 😎:", reply_markup = cancel)
     	else:
-    		return bot.send_message(message.chat.id, "🎁This feature is only available for premium users🎁\n💼UPGRADE NOW: @Lencho24")
+    		return bot.send_message(message.chat.id, "🎁This feature is only available for premium users🎁\n💼UPGRADE NOW: @betterparrot")
     if message.text =="📝CREATE POST":
     	return bot.send_message(message.chat.id, "Choose the type of button:", reply_markup = typebtn)
     if message.text =="NORMAL BUTTON":
