@@ -55,7 +55,7 @@ def is_premium(user_id):
 			return True
 			
 channelbtn = InlineKeyboardMarkup()
-ch = InlineKeyboardButton(text ="✅JOIN CHANNEL", url="t.me/mt_projectz")
+ch = InlineKeyboardButton(text ="✅JOIN CHANNEL", url="t.me/tech_wizardz")
 channelbtn.add(ch)
 
 
@@ -70,7 +70,7 @@ def admin_panel(message):
 		bot.send_message(message.chat.id, "😎Welcome to ADMIN PANEL:)\nChoose an option below:)", reply_markup = keyboard)
 	
 def check_sub(message):	
-	a =  bot.get_chat_member("@mt_projectz", message.from_user.id)
+	a =  bot.get_chat_member("@tech_wizardz", message.from_user.id)
 	if a.status == "left":
 		return False
 	else:
@@ -86,7 +86,7 @@ def get_links(message):
 	check = check_sub(message)
 	banned = is_banned(message.from_user.id)
 	if check== False:
-	   return bot.send_message(message.chat.id, "⚠️Before using this bot, You need to be a member of My Updates Channel⚠️", reply_markup = sub)
+	   return bot.send_message(message.chat.id, "⚠️Before using this bot, You need to be a member of the following channel⚠️", reply_markup = sub)
 	else:
 		if banned is True:
 			return bot.send_message(message.chat.id, "⚠️You Have Been Banned:(")
