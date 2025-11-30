@@ -17,6 +17,8 @@ Simply follow the step-by-step prompts to create your post. The bot will guide y
 2. Adding your post text or photo
 3. Customizing your button labels
 
+**Source code**: https://github.com/BraveRam/FasterPostMaker.git
+
 It's fast, easy, and saves you time!"""
 
 # USER STATUS MESSAGES
