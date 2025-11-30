@@ -7,9 +7,8 @@ A Telegram bot that helps users create promotional posts with custom inline butt
 - **📝 Create Posts** - Create promotional posts with text or photos
 - **🔘 Normal Buttons** - Add custom URL buttons to your posts
 - **🔐 Login Buttons** - Add Telegram login buttons (Premium feature)
-- **User Management** - Search, ban, and unban users
+- **👤User Management** - Search, ban, and unban users
 - **📢 Broadcasting** - Send messages to all bot users
-- **� Share251 Integration** - Extract links from @share251bot posts
 
 ## Installation & Setup
 
